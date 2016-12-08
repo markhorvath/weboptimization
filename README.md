@@ -55,6 +55,11 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
 
 OPTIMIZATION STEPS:
+INDEX.HTML:
+1. Moved <script async src="http://www.google-analytics.com/analytics.js"></script> to the bottom after </body> and added async.
+2. Added <style> tag in the <head> and moved style.css markup instead of linking to it using <link href>
+3. Used @font-face in <style> to call on specific google API fonts
 
-1. Used Gimp to resize all images in index.html.
-2.
+MAIN.JS:
+4. changePizzaSizes function was simplified to remove for loop bottlenecks and unnecessarily complex determineDx function.  This reduced the pizza resize time to under 5ms.
+5.
