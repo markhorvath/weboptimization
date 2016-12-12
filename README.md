@@ -62,4 +62,9 @@ INDEX.HTML:
 
 MAIN.JS:
 4. changePizzaSizes function was simplified to remove for loop bottlenecks and unnecessarily complex determineDx function.  This reduced the pizza resize time to under 5ms.
-5.
+5. Reduced the number of iterations in the for loop for the pizza animations while scrolling (line 539).
+6. Created a variable for the ID movingPizzas1 and used it in the for loop instead of using querySelector each time (line 549)
+7. Cached items variable outside of updatePositions() so it doesn't have to access the DOM each time and used getElementByClassName instead of querySelectorAll.
+8. Created variable moverLength for items.length to make the for loop slightly faster.
+9. Created variable for scroll position outside of for loop to avoid repeated calculation.
+10. Declared phase and items.length variable inside for-loop initialization.
