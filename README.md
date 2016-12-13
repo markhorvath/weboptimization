@@ -68,3 +68,4 @@ MAIN.JS:
 8. Created variable moverLength for items.length to make the for loop slightly faster.
 9. Created variable for scroll position outside of for loop to avoid repeated calculation.
 10. Declared phase and items.length variable inside for-loop initialization.
+11. Set up array of phase values since they don't need to vary beyond 5 possible values

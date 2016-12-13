@@ -510,8 +510,14 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 //Cached items variable outside of updatePositions() so it doesn't have to access the DOM each time and
 //used getElementByClassName instead of querySelectorAll
 var items = document.getElementsByClassName("mover");
+var lastScrollPosY = 0;
+var ticking = false;
 
 function updatePositions() {
+
+  var ticking = false;
+  var currentScroll = lastScrollPosY;
+
   frame++;
   window.performance.mark("mark_start_frame");
 
@@ -529,7 +535,7 @@ function updatePositions() {
   for (var i = 0, j = items.length; i < j; i++) {
     var phase = phases[(i % 5)];
     //console.log(phase, document.body.scrollTop / 1250);
-    //items[i].style.transform = translateX((items[i].basicLeft + 100 * phase) + 'px');
+    //items[i].style.transform = translateY((items[i].basicLeft + 100 * phase) + 'px');
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     //console.log(items[i].style.left);
   }
@@ -544,8 +550,23 @@ function updatePositions() {
   }
 }
 
+
+
+function onScroll(){
+  lastScrollPosY = window.scrollY;
+  requestTick();
+}
+
+function requestTick(){
+  if(!ticking){
+    requestAnimationFrame(updatePositions);
+    //ticking = false;
+  }
+  ticking = true;
+}
+
 // runs updatePositions on scroll
-window.addEventListener('scroll', updatePositions);
+window.addEventListener('scroll', onScroll, false);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
