@@ -462,11 +462,14 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+var pizzasDiv = document.getElementById("randomPizzas");
+// Attempted using createDocumentFragment() here, not sure if it's being utilized correctly
+var docFrag = document.createDocumentFragment();
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
-  pizzasDiv.appendChild(pizzaElementGenerator(i));
+  docFrag.appendChild(pizzaElementGenerator(i));
 }
-
+// Attempt to append all children elements in docFrag at once
+pizzasDiv.appendChild(docFrag);
 // User Timing API again. These measurements tell you how long it took to generate the initial pizzas
 window.performance.mark("mark_end_generating");
 window.performance.measure("measure_pizza_generation", "mark_start_generating", "mark_end_generating");
@@ -529,13 +532,15 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  // Created a variable for the movingPizzas1 ID instead of using querySelector each time in the for loop (line 549)
+  // Created a variable for the movingPizzas1 ID instead of using querySelector each time in the for loop
   var pizzaElem = document.getElementById("movingPizzas1");
-  // Reduced the number of loop iterations (pizzas) as 200 is far more than necessary
+  // Declare elem outside of for-loop
+  var elem;
+  // Determine the number of moving pizzas according the user's screen height
   var pizzaNum = (screen.height / s) * cols;
   var totalMovingPizzas = Math.ceil(pizzaNum);
   for (var i = 0; i < totalMovingPizzas; i++) {
-    var elem = document.createElement('img');
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
