@@ -401,18 +401,20 @@ var pizzaElementGenerator = function(i) {
 // resizePizzas(size) is called when the slider in the "Our Pizzas" section of the website moves.
 var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API function
-
+  // Created pizzaSizeElem inside resizePizzas and outside of changeSliderLabel function and used
+  // getElementById method instead of querySelector
+  var pizzaSizeElem = document.getElementById('pizzaSize');
   // Changes the value for the size of the pizza above the slider (from video lecture)
   function changeSliderLabel(size) {
     switch(size) {
       case "1":
-        document.querySelector("#pizzaSize").innerHTML = "Small";
+        pizzaSizeElem.innerHTML = "Small";
         return;
       case "2":
-        document.querySelector("#pizzaSize").innerHTML = "Medium";
+        pizzaSizeElem.innerHTML = "Medium";
         return;
       case "3":
-        document.querySelector("#pizzaSize").innerHTML = "Large";
+        pizzaSizeElem.innerHTML = "Large";
         return;
       default:
         console.log("bug in changeSliderLabel");
@@ -439,8 +441,8 @@ var resizePizzas = function(size) {
         default:
           console.log("bug in sizeSwitcher");
       }
-    // Variable randomPizzas uses querySelectorAll only once to call all randomPizzaContainer classes
-    var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
+    // Variable randomPizzas uses getElementsByClassName instead of querySelector to get all randomPizzaContainer classes
+    var randomPizzas = document.getElementsByClassName('randomPizzaContainer');
     // Simpler for loop that changes size of pizzas based on percent, var made for array length
     var pizzaArrayLength = randomPizzas.length;
     for (var i = 0; i < pizzaArrayLength; i++) {
@@ -460,8 +462,7 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
-// Reduced the number of pizzas in this for-loop
-for (var i = 2; i < 48; i++) {
+for (var i = 2; i < 100; i++) {
   var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
@@ -531,7 +532,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Created a variable for the movingPizzas1 ID instead of using querySelector each time in the for loop (line 549)
   var pizzaElem = document.getElementById("movingPizzas1");
   // Reduced the number of loop iterations (pizzas) as 200 is far more than necessary
-  for (var i = 0; i < 40; i++) {
+  var pizzaNum = (screen.height / s) * cols;
+  var totalMovingPizzas = Math.ceil(pizzaNum);
+  for (var i = 0; i < totalMovingPizzas; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
