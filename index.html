@@ -1,118 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content=" FILL ME IN ">
-      <meta name="author" content=" FILL ME IN ">
-      <title>Mark Horvath: Portfolio</title>
-      <!--<link href="css/style.css" rel="stylesheet">-->
-      <link href="css/print.css" rel="stylesheet" media = "print">
-      <script>
-         (function(w,g){w['GoogleAnalyticsObject']=g;
-         w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
+<html>
+  <head>
+    <title>Mark Horvath Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" Mark Horvath's Portfolio ">
+    <meta name="keywords" content=" HTML CSS Javascript jQuery Bootstrap Angular Knockout.js Node.js Front-end Web Developer ">
+    <meta name="author" content=" Mark Horvath ">
 
-         // Optional TODO: replace with your Google Analytics profile ID.
-         ga('create', 'UA-XXXX-Y');
-         ga('send', 'pageview');
-      </script>
-      <script async src="js/perfmatters.js"></script>
-      <style>
-         @font-face {
-         font-family: 'Open Sans';
-         font-style: normal;
-         font-weight: 400;
-         src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
-         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-         }
-         @font-face {
-         font-family: 'Open Sans';
-         font-style: normal;
-         font-weight: 400;
-         src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/u-WUoqrET9fUeobQW7jkRYX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-         unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-         }
-         html {
-         font-size: 100%;
-         overflow-y: scroll;
-         -webkit-tap-highlight-color: rgba(0,0,0,0);
-         -ms-text-size-adjust: 100%;
-         -webkit-text-size-adjust: none;
-         }
-         body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; }
-         body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #333; }
-         a { color: #12C; }
-         a:visited { color: #61C; }
-         a:focus { outline: thin dotted; }
-         a:hover, a:active { color: #c00; outline: 0; }
-         b, strong { font-weight: bold; }
-         pre, code { font-family: monospace, monospace; font-size: 1em; }
-         ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
-         img { border: 0; max-width: 100%; }
-         body { background: #fff; }
-         header, footer, .container { max-width: 45em; margin: 0 auto; }
-         header { padding: 0 0.5em; color: #C90B0B; }
-         header img { border-radius: 40px; float: left; }
-         header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
-         header p span { font-size: 0.8em; font-weight: normal;}
-         .hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
-         border-bottom: 1px solid #ccc;
-         border-top: 1px solid #ccc;
-         }
-         .content { padding: 1em 1em; }
-         .content li { list-style-type: none; font-size: 1.1em;}
-         li img { float:left; padding-right: 1em; }
-         li p { font-size: 0.9em; font-style: italic; }
-         footer {
-         padding: 0 0.5em;
-         border-top: 1px solid #ccc;
-         }
-         footer span { float: right; font-style: italic; }
-         /* Smartphones (portrait) */
-         @media only screen and (max-width: 480px) {
-         body { font-size: 12px;}
-         header p { padding-left: 4.5em;}
-         }
-      </style>
-   </head>
-   <body>
-      <header>
-         <a href="/"><img src="img/profilepic.jpg"></a>
-         <p>Cameron Pittman<br><span>Web Developer</span></p>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400i" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="wrapper">
+      <header class="navbar-header col-md-12 col-xs-12">
+         <div class="row">
+            <div class="navbar-left col-md-4 col-xs-12">
+            Mark Horvath
+            </div>
+            <div id="webdev" class="col-md-4 col-xs-6">
+            Front-End Web Developer
+            </div>
+            <div class="navbar-right col-md-4 col-xs-6"><a href="mailto:markhorvath7@gmail.com" id="contact"><span class="glyphicon glyphicon-envelope"></span></a></div>
+         </div>
       </header>
-      <div class="container">
-         <div class="hero">
-            <strong>I love web development!</strong> This is a template for a simple portfolio. I decided to use it to showcase a few Udacity courses I've taken and some teaching work, but you can use it to showcase any kind of project that you want the world to see :) <br> Contact me: me@email.com
+   </div>
+  </div>
+  <section id="body" class="container">
+   <div class="row">
+      <section id="about-me" class="col-md-5">
+         <img src="img/profilepic.jpg" id="bio-pic">
+         <p>Hello, my name is Mark Horvath and I am a web developer.  I've always had an interest in programming, but only recently realized that I had the passion to make a career out of it.  After much research, it seemed like Javascript was a good choice as a first programming language.<br>  I started doing tutorials online focused on HTML, CSS and Javascript.  This eventually led to Udacity's Front-end Nanodegree program.  Completing this course gave me an excellent understanding of the fundamentals of front-end web development and the wherewithal to continue learning and building on my own.  I am currently transitioning to a new career in programming, starting with web development, while continuing to hone and develop my skills as a programmer.</p>
+         <h3>Skills:</h3>
+         <div class="row">
+            <div class="col-lg-12 col-xs-12" id="skills-section">
+            <img title="By daPhyre [CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons" src="https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg" class="img-responsive" id="skills2" alt="HTML5 and CSS Logo">
+            <img title="By JavaScript,Pixabay (pixabay.com) [Public domain], via Wikimedia Commons" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Javascript-736400_960_720.png" class="img-responsive" id="skills" alt="Javascript Logo">
+            <img title="By Bootstrap (http://blog.getbootstrap.com) [Public domain], via Wikimedia Commons" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Boostrap_logo.svg" class="img-responsive" id="skills" alt="Bootstrap Logo">
+            <img title="By The jQuery Foundation [Public domain], via Wikimedia Commons" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Jquery-mobile-logo.png" class="img-responsive" id="skills2" alt="jQuery Logo">
+            <img title="By Boris Vacher (derivative work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" class="img-responsive" id="skills2" alt="NPM Logo">
+            <img title="By Google (https://angular.io/presskit.html) [CC BY 4.0 (http://creativecommons.org/licenses/by/4.0)], via Wikimedia Commons" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg" class="img-responsive" id="skills" alt="Angular Logo">
+            <img title="By GitHub, Inc (https://github.com/logos) [Public domain], via Wikimedia Commons" src="https://upload.wikimedia.org/wikipedia/commons/5/54/GitHub_Logo.png" class="img-responsive" id="skills2" alt="Github Logo">
+            </div>
          </div>
-         <div class="content">
-            <ul>
-               <li>
-                  <img src="https://lh4.ggpht.com/kJEnfqhPvtm4m3EneSZ4fWYGS8lW4YNhEjk6zPkyrQaBUHc-2Y_ElDic99NHI0h-UBLXVbRCjFybFvrWxdk=s100">
-                  <a href="project-2048.html">Build Your Own 2048!</a>
-                  <p>I made my own version of 2048. How cool is that!?</p>
-               </li>
-               <li>
-                  <img src="https://lh6.ggpht.com/f_0W8h__3G99CWTjnMjD8BUKm7yp2-wJyApLtTwFoFtlal2ULf_JgHIsOQq2NiYfKOdMlXlMHDKNo5XVZLs=s100">
-                  <a href="project-webperf.html">Website Performance Optimization</a>
-                  <p>Hey... this class looks familiar.</p>
-               </li>
-               <li>
-                  <img src="https://lh5.ggpht.com/IKdCmTWn8a2nMhlwMYzryvzRN5CUZAOBr4tDrEAbszV7TIFe9pRAInA4kkYcgTXwrifJsBEsq1agTueuu-g=s100">
-                  <a href="project-mobile.html">Mobile Web Development</a>
-                  <p>Making mobile apps isn't so hard after all.</p>
-               </li>
-               <li>
-                  <img style="width: 100px;" src="views/images/pizzeria_small.jpg">
-                  <a href="views/pizza.html">Cam's Pizzeria</a>
-                  <p>Who wants a performant pizza?</p>
-               </li>
-            </ul>
+      </section>
+      <section class="col-md-7">
+      <h2 class="text-center">My Portfolio</h2>
+         <div class="row" id="proj-description">
+            <div class="col-md-4 col-xs-4">
+               <img src="img/flashcard.png" class="img-responsive img-thumbnail" id="project-img">
+            </div>
+            <div class="col-md-8">
+               <h4 class="col-xs-12"><a href="https://markhorvath.github.io/greflashcards/">Single-page Flashcard App for GRE Vocabulary</a></h4>
+               <p class="col-xs-12">A working flash card app developed to aid students in studying vocabulary for the GRE at a desktop or on the go.  This was developed based on requets from many of my private students during my time teaching English in Taiwan and Korea.</p>
+            </div>
          </div>
-         <footer>
-            <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
-         </footer>
-      </div>
-   </body>
-   <script async src="http://www.google-analytics.com/analytics.js"></script>
+         <hr>
+         <div class="row">
+            <div class="col-md-4 col-xs-4">
+               <img src="img/tokyomap.png" class="img-responsive img-thumbnail" id="project-img">
+            </div>
+            <div class="col-md-8">
+                  <h4 class="col-xs-12"><a href="https://markhorvath.github.io/neighborhoodmap/">Interactive Tokyo Map for Udacity Project</a></h4>
+                  <p class="col-xs-12">An interactive map built from scratch which was the second to last project of the Udacity Front-end Web Developer course.  Demonstrates working knowledge of Google Maps API, Knockout.js, and utilizing third party API's.  </p>
+            </div>
+         </div>
+         <hr>
+         <div class="row">
+            <div class="col-md-4 col-xs-4">
+               <img src="img/arcadeclone.png" class="img-responsive img-thumbnail" id="project-img">
+            </div>
+            <div class="col-md-8">
+               <h4 class="col-xs-12"><a href="https://markhorvath.github.io/arcadegameclone/">Arcade Game Clone</a></h4>
+               <p class="col-xs-12">A simple clone of a classic arcade game as part of a Udacity project.  I created player, enemy, and gem classes, collision detection, and game levels using OOP principles.</p>
+            </div>
+         </div>
+      </section>
+   </div>
+  </section>
+   <footer class="navbar-fixed-bottom">
+      <span id="copyright">&copy; 2017</span>
+   </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
 </html>
 
